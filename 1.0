@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仙逆经典语录</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #8B0000; /* 深红色背景 */
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .scrolling-quotes {
+            width: 80%;
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid gold;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .quote-container {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            animation: scroll 60s linear infinite;
+        }
+        
+        .quote {
+            font-size: 1.8em;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* 为每个语录段落设置不同颜色 */
+        .quote:nth-child(1) { color: #FFD700; } /* 金色 */
+        .quote:nth-child(2) { color: #7FFFD4; } /* 碧绿色 */
+        .quote:nth-child(3) { color: #FF6347; } /* 番茄色 */
+        .quote:nth-child(4) { color: #9370DB; } /* 中紫色 */
+        .quote:nth-child(5) { color: #00FA9A; } /* 中春绿色 */
+        .quote:nth-child(6) { color: #FFA500; } /* 橙色 */
+        .quote:nth-child(7) { color: #00BFFF; } /* 深天蓝色 */
+        .quote:nth-child(8) { color: #FF69B4; } /* 热粉色 */
+        .quote:nth-child(9) { color: #98FB98; } /* 淡绿色 */
+        .quote:nth-child(10) { color: #DDA0DD; } /* 梅红色 */
+        
+        .source {
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 10px;
+            color: #EEE8AA; /* 苍金色 */
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateY(100vh); }
+            100% { transform: translateY(-100%); }
+        }
+        
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px black;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <h1>《仙逆》经典语录</h1>
+    
+    <div class="scrolling-quotes">
+        <div class="quote-container">
+            <div class="quote">"我王林一生，不拜天地，不敬鬼神，只认本心，只求自在。"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"这世间，没有对错，只有强弱。弱者的对，也是错；强者的错，也是对。"</div>
+            <div class="source">—— 仙逆</div>
+            
+            <div class="quote">"修道之路，本就是逆天而行。若顺天应命，何须修道？"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"我王林可以死，但绝不会跪着生！"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"这天地虽大，但若不容我，我便破了这天，碎了这地！"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"所谓命运，不过是弱者的借口，强者的谦辞。"</div>
+            <div class="source">—— 仙逆</div>
+            
+            <div class="quote">"修道千年，只为有朝一日，能掌握自己的命运。"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"我王林行事，何须向他人解释！"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"这世间最痛苦的事，不是死亡，而是明明活着，却无能为力。"</div>
+            <div class="source">—— 仙逆</div>
+            
+            <div class="quote">"若天压我，劈开那天；若地拘我，踏碎那地！"</div>
+            <div class="source">—— 王林</div>
+            
+            <!-- 重复内容使循环更平滑 -->
+            <div class="quote">"我王林一生，不拜天地，不敬鬼神，只认本心，只求自在。"</div>
+            <div class="source">—— 王林</div>
+            
+            <div class="quote">"这世间，没有对错，只有强弱。弱者的对，也是错；强者的错，也是对。"</div>
+            <div class="source">—— 仙逆</div>
+        </div>
+    </div>
+    
+    <script>
+        // 让文字滚动更平滑
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.quote-container');
+            const quotes = document.querySelectorAll('.quote');
+            
+            // 随机调整颜色
+            quotes.forEach(quote => {
+                const randomHue = Math.floor(Math.random() * 360);
+                quote.style.color = `hsl(${randomHue}, 80%, 65%)`;
+            });
+        });
+    </script>
+</body>
+</html>
